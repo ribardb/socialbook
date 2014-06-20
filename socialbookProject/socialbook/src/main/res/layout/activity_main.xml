@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="MergeRootFrame"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|top"
+        android:background="#fff">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher"
+            android:layout_marginTop="15dp"
+            android:contentDescription="logo" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:ems="10"
+            android:id="@+id/email"
+            android:layout_gravity="center_horizontal"
+            android:text="jdoe@gmail.com"/>
+
+        <LinearLayout
+            android:layout_width="220dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal">
+
+            <EditText
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Mot de passe"
+                android:ems="10"
+                android:id="@+id/password"
+                android:layout_gravity="center_horizontal"
+                android:text="P@ssw0rd"
+                />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imageButton"
+                android:src="@drawable/medsub"
+                android:layout_marginLeft="10dp"
+                android:background="#ffffff"
+                android:onClick="displayConnexion"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="Orientation"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="bottom">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Inscription"
+            android:id="@+id/btn_inscription"
+            android:layout_gravity="center_horizontal"
+            android:background="#748CD1"
+            android:textColor="#ffffff"
+            android:onClick="displayInscription"/>
+
+        <ImageView
+            android:layout_width="49dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageView"
+            android:src="@drawable/medplus"
+            android:layout_marginLeft="-160dp"
+            android:background="#748CD1"/>
+    </LinearLayout>
+
+</RelativeLayout>

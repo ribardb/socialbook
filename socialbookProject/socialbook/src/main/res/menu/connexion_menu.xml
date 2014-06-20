@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.socialbook.Connexion" >
+
+    <item android:id="@+id/action_adding"
+        android:title="Ajout"
+        android:orderInCategory="100"
+        android:showAsAction="collapseActionView" />
+    <item android:id="@+id/synchro"
+        android:title="Synchroniser"
+        android:orderInCategory="101"
+        android:onClick="onSynchro"/>
+</menu>

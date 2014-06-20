@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/Users/bertal/socialbook/socialbookProject/socialbook/libraries/volley/res" />
+        <source path="/Users/bertal/socialbook/socialbookProject/socialbook/libraries/volley/build/res/rs/debug" />
+        <source path="/Users/bertal/socialbook/socialbookProject/socialbook/libraries/volley/build/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/bertal/socialbook/socialbookProject/socialbook/libraries/volley/src/debug/res" />
+    </dataSet>
+
+</merger>

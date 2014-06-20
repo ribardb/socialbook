@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/Users/bertal/socialbook/socialbookProject/socialbook/libraries/volley/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/bertal/socialbook/socialbookProject/socialbook/libraries/volley/src/debug/assets" />
+    </dataSet>
+
+</merger>

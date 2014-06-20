@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/socialbook/socialbook.iml" filepath="$PROJECT_DIR$/socialbook/socialbook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socialbookProject.iml" filepath="$PROJECT_DIR$/socialbookProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/socialbook/libraries/volley/volley.iml" filepath="$PROJECT_DIR$/socialbook/libraries/volley/volley.iml" />
+    </modules>
+  </component>
+</project>
+
