@@ -9,5 +9,6 @@
     <string name="title_activity_contact">Contact</string>
     <string name="title_activity_ajout_contact">AjoutContact</string>
     <string name="title_activity_localisation_contact">Map</string>
+    <string name="title_activity_modifie_contact">ModifieContact</string>
 
 </resources>

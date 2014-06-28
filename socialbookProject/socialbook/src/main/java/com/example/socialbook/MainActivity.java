@@ -174,7 +174,7 @@ public class MainActivity extends Activity {
                     });
 
             HttpClient httpClient = new DefaultHttpClient();
-            HttpGet getRequest = new HttpGet("http://172.16.56.12/Api/Utilisateur?login="+str_email+"&password="+str_password+"");
+            HttpGet getRequest = new HttpGet("http://192.168.1.5/Api/Utilisateur?login="+str_email+"&password="+str_password+"");
                     mHandler.post(new Runnable() {
                         public void run() {
 
@@ -300,7 +300,7 @@ public class MainActivity extends Activity {
                     //int idU = contact.getInt("ID_UTILISATEUR");
                     String ville = contact.getString("VILLE");
                     String adresse = contact.getString("ADRESSE");
-                    int cp = contact.getInt("CP");
+                    String cp = contact.getString("CP");
                     String tel = contact.getString("TELEPHONE");
                     String datenaissance = contact.getString("DATE_NAISSANCE");
                     double longitude = contact.getDouble("LONGITUDE");

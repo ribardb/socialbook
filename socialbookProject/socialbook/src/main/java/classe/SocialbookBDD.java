@@ -185,7 +185,7 @@ public class SocialbookBDD {
             contact.setPrenom(c.getString(NUM_COL_PRENOM));
             contact.setTelephone(c.getString(NUM_COL_TELEPHONE));
             contact.setAdresse(c.getString(NUM_COL_ADRESSE));
-            contact.setCp(c.getInt(NUM_COL_CP));
+            contact.setCp(c.getString(NUM_COL_CP));
             contact.setVille(c.getString(NUM_COL_VILLE));
             contact.setDate_naissance(c.getString(NUM_COL_DATE_NAISSANCE));
             contact.setId_contact_serveur(c.getInt(NUM_COL_ID_CONTACT_SERVEUR));
@@ -213,7 +213,7 @@ public class SocialbookBDD {
             contact.setPrenom(c.getString(NUM_COL_PRENOM));
             contact.setTelephone(c.getString(NUM_COL_TELEPHONE));
             contact.setAdresse(c.getString(NUM_COL_ADRESSE));
-            contact.setCp(c.getInt(NUM_COL_CP));
+            contact.setCp(c.getString(NUM_COL_CP));
             contact.setVille(c.getString(NUM_COL_VILLE));
             contact.setDate_naissance(c.getString(NUM_COL_DATE_NAISSANCE));
             contact.setId_contact_serveur(c.getInt(NUM_COL_ID_CONTACT_SERVEUR));
@@ -250,7 +250,7 @@ public class SocialbookBDD {
         contact.setPrenom(c.getString(NUM_COL_PRENOM));
         contact.setTelephone(c.getString(NUM_COL_TELEPHONE));
         contact.setAdresse(c.getString(NUM_COL_ADRESSE));
-        contact.setCp(c.getInt(NUM_COL_CP));
+        contact.setCp(c.getString(NUM_COL_CP));
         contact.setVille(c.getString(NUM_COL_VILLE));
         contact.setDate_naissance(c.getString(NUM_COL_DATE_NAISSANCE));
         contact.setId_contact_serveur(c.getInt(NUM_COL_ID_CONTACT_SERVEUR));

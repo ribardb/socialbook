@@ -12,7 +12,7 @@ public class Contact_metier {
     private String prenom;
     private String telephone;
     private String adresse;
-    private int cp;
+    private String cp;
     private String ville;
     private double longitude;
     private double latitude;
@@ -21,7 +21,7 @@ public class Contact_metier {
 
     public Contact_metier(){}
 
-    public Contact_metier(int id_contact, int id_utilisateur, String nom, String prenom, String telephone, String adresse, int cp, String ville, String date_naissance){
+    public Contact_metier(int id_contact, int id_utilisateur, String nom, String prenom, String telephone, String adresse, String cp, String ville, String date_naissance){
         this.id_contact = id_contact;
         this.id_utilisateur = id_utilisateur;
         this.nom = nom;
@@ -34,7 +34,7 @@ public class Contact_metier {
         this.longitude=0;
         this.latitude=0;
     }
-    public Contact_metier( int id_utilisateur, String nom, String prenom, String telephone, String adresse, int cp, String ville, String date_naissance){
+    public Contact_metier( int id_utilisateur, String nom, String prenom, String telephone, String adresse, String cp, String ville, String date_naissance){
         this.id_contact = id_contact;
         this.id_utilisateur = id_utilisateur;
         this.nom = nom;
@@ -96,11 +96,11 @@ public class Contact_metier {
         this.adresse = adresse;
     }
 
-    public int getCp() {
+    public String getCp() {
         return cp;
     }
 
-    public void setCp(int cp) {
+    public void setCp(String cp) {
         this.cp = cp;
     }
 

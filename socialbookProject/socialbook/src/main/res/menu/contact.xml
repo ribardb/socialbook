@@ -1,13 +1,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.socialbook.Contact" >
-
+    tools:context="com.example.socialbook.Contact">
     <item android:id="@+id/action_deleting"
         android:title="Supprimer"
         android:orderInCategory="100"
         android:showAsAction="collapseActionView" />
     <item android:id="@+id/action_localiser"
         android:title="Localiser"
+        android:orderInCategory="100"
+        android:showAsAction="collapseActionView" />
+    <item android:id="@+id/action_edit"
+        android:title="Editer"
         android:orderInCategory="100"
         android:showAsAction="collapseActionView" />
 </menu>

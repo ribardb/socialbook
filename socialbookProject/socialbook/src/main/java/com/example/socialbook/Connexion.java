@@ -120,7 +120,7 @@ public class Connexion extends ListActivity {
         Intent i = new Intent(this, Contact.class);
         //i.putExtra("nom", item.get("nom"));
         //i.putExtra("prenom", item.get("prenom"));
-        i.putExtra("id", item.get("id"));
+        i.putExtra("id", Integer.parseInt(item.get("id")));
         startActivity(i);
         //finish();
     }
@@ -145,7 +145,7 @@ public class Connexion extends ListActivity {
             //i.putExtra("prenom", item.get("prenom"));
             //i.putExtra("id", item.get("id"));
             startActivity(i);
-            //finish();
+            finish();
             //return true;
         }
 

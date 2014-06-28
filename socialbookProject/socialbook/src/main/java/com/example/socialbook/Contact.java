@@ -1,9 +1,13 @@
 package com.example.socialbook;
 
+import android.annotation.TargetApi;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
@@ -27,10 +31,9 @@ public class Contact extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
         Bundle extra = getIntent().getExtras();
-        int var_id = Integer.parseInt(extra.getString("id"));
+        int var_id = extra.getInt("id");
         //String var_name = extra.getString("nom");
         //String var_firstname = extra.getString("prenom");
-
         //Création d'une instance de ma classe LivresBDD
         SocialbookBDD socialbookBdd = new SocialbookBDD(this);
         //On ouvre la base de données pour écrire dedans
@@ -39,25 +42,47 @@ public class Contact extends Activity {
         contact = socialbookBdd.getContactWithID(var_id);
         List<ReseauSocial_metier> social_metierList = socialbookBdd.getReseauxSociaux(contact.getId_contact_serveur());
         TextView _textView_nom = (TextView) findViewById(R.id.nom);
-        _textView_nom.setText(contact.getNom());
-        TextView _textView_prenom = (TextView) findViewById(R.id.prenom);
-        _textView_prenom.setText(contact.getPrenom());
-        TextView _textView_numero = (TextView) findViewById(R.id.numero);
-        _textView_numero.setText(contact.getTelephone());
-        TextView _textView_adresse = (TextView) findViewById(R.id.adresse);
-        _textView_adresse.setText(contact.getAdresse());
-        TextView _textView_cp = (TextView) findViewById(R.id.cp);
-        String cp = String.valueOf(contact.getCp());
-        if (cp.equals("0")){
-            _textView_cp.setText("");
+        if (contact.getNom().equals("")){
+            _textView_nom.setHeight(-10);
         }
         else{
-            _textView_cp.setText(cp);
+            _textView_nom.setText(contact.getNom());
         }
-
+        TextView _textView_prenom = (TextView) findViewById(R.id.prenom);
+        if (contact.getPrenom().equals("")){
+            _textView_prenom.setHeight(-10);
+        }
+        else{
+            _textView_prenom.setText(contact.getPrenom());
+        }
+        TextView _textView_numero = (TextView) findViewById(R.id.numero);
+        if (contact.getTelephone().equals("")){
+            _textView_numero.setHeight(-10);
+        }
+        else{
+            _textView_numero.setText(contact.getTelephone());
+        }
+        TextView _textView_adresse = (TextView) findViewById(R.id.adresse);
+        if (contact.getAdresse().equals("")){
+            _textView_adresse.setHeight(-10);
+        }
+        else{
+            _textView_adresse.setText(contact.getAdresse());
+        }
+        TextView _textView_cp = (TextView) findViewById(R.id.cp);
+        if (contact.getCp().equals("")){
+            _textView_cp.setHeight(-10);
+        }
+        else {
+            _textView_cp.setText(contact.getCp());
+        }
         TextView _textView_ville = (TextView) findViewById(R.id.ville);
-        _textView_ville.setText(contact.getVille());
-
+        if (contact.getVille().equals("")){
+            _textView_ville.setHeight(-10);
+        }
+        else{
+            _textView_ville.setText(contact.getVille());
+        }
         TextView _textView_facebook = (TextView) findViewById(R.id.facebook);
         TextView _textView_twitter = (TextView) findViewById(R.id.twitter);
 
@@ -83,6 +108,7 @@ public class Contact extends Activity {
     }
 
 
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
@@ -97,7 +123,7 @@ public class Contact extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         Bundle extra = getIntent().getExtras();
-        int var_id = Integer.parseInt(extra.getString("id"));
+        int var_id = extra.getInt("id");
         int id = item.getItemId();
         if (id == R.id.action_deleting) {
             //Création d'une instance de ma classe LivresBDD
@@ -122,10 +148,16 @@ public class Contact extends Activity {
                 Intent i = new Intent(this, LocalisationContact.class);
                 i.putExtra("id", var_id);
                 startActivity(i);
+                finish();
             }
         }
-        else {
-
+        else if(id == R.id.action_edit){
+            //Création d'une instance de ma classe LivresBDD
+            //On ouvre la base de données pour écrire dedans
+            Intent i = new Intent(this, ModifieContact.class);
+            i.putExtra("id", var_id);
+            startActivity(i);
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }
